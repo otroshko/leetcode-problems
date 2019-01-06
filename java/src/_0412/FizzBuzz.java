@@ -12,15 +12,13 @@ import java.util.List;
 
 public class FizzBuzz {
     public List<String> fizzBuzz(int n) {
-        List<String> result = new ArrayList<String>();
+        List<String> result = new ArrayList<>();
 
         for(int i = 1; i <= n; i++) {
-            if(i % (3 * 5) == 0) {
-                result.add("FizzBuzz");
-            } else if(i % 3 == 0) {
-                result.add("Fizz");
+            if(i % 3 == 0) {
+                result.add(i % 5 == 0 ? "FizzBuzz" : "Fizz");
             } else if(i % 5 == 0) {
-                result.add("Buzz");
+                result.add(i % 3 == 0 ? "FizzBuzz" : "Buzz");
             } else {
                 result.add(String.valueOf(i));
             }
