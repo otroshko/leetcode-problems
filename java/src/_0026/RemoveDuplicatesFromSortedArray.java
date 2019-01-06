@@ -9,7 +9,7 @@ package _0026;
 
 public class RemoveDuplicatesFromSortedArray {
     public int removeDuplicates(int[] nums) {
-        if(nums == null) return 0;
+        if(nums == null || nums.length < 1) return 0;
 
         int currentPosition = 1;
 
