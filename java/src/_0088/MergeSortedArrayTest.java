@@ -1,4 +1,4 @@
-package _88;
+package _0088;
 
 import org.junit.Test;
 
