@@ -1,17 +1,11 @@
 package _88;
 
-import org.junit.BeforeClass;
 import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.Assert.assertArrayEquals;
 
 public class MergeSortedArrayTest {
-    private static MergeSortedArray _solution;
-
-    @BeforeClass
-    public static void setup() {
-        _solution = new MergeSortedArray();
-    }
+    private MergeSortedArray _solution = new MergeSortedArray();
 
     @Test
     public void test1() {
