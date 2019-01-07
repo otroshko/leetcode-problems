@@ -1,7 +1,13 @@
 package _0136;
 
 import java.util.HashMap;
-import java.util.LinkedList;
+
+/*
+    Given a non-empty array of integers, every element appears twice except for one. Find that single one.
+
+    Note:
+    Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?
+*/
 
 public class SingleNumber {
     public int singleNumber(int[] nums) {
@@ -13,16 +19,16 @@ public class SingleNumber {
     }
 
     public int singleNumberOld(int[] nums) {
-        LinkedList<Integer> list = new LinkedList<>();
+        HashMap<Integer, Integer> map = new HashMap<>();
 
         for (Integer item:nums) {
-            if(list.contains(item)) {
-                list.remove(item);
+            if (map.containsKey(item)) {
+                map.remove(item);
             } else {
-                list.add(item);
+                map.put(item, item);
             }
         }
 
-        return list.getFirst();
+        return (Integer) map.values().toArray()[0];
     }
 }
